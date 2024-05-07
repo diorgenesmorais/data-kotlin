@@ -2,10 +2,10 @@
 
 > Base de dados para projeto de estudo com Kotlin
 
-1 - Renomei o arquivo '.env.example' para '.env'
+1 - Copie o arquivo '.env.example' para '.env'
 
 ```bash
-mv .env.example .env
+cp .env.example .env
 ```
 
 2 - Defina uma senha para o MySql no arquivo '.env'
@@ -14,7 +14,7 @@ mv .env.example .env
 MYSQL_PASSWORD="sua-senha"
 ```
 
-3 - Executar do docker compose:
+3 - Executar usando docker compose:
 
 ```bash
 docker-compose up -d
@@ -24,4 +24,10 @@ docker-compose up -d
 
 ```bash
 docker-compose down
+```
+
+5 - Acessar o MySql do contêiner
+
+```bash
+docker exec -it kotlin-mysql mysql -u admin -p hr
 ```
