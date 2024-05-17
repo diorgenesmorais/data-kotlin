@@ -8,10 +8,12 @@
 cp .env.example .env
 ```
 
-2 - Defina uma senha para o MySql no arquivo '.env'
+2 - Defina os valores para as variáveis para o MySql no arquivo '.env'
 
 ```bash
-MYSQL_PASSWORD="sua-senha"
+MYSQL_DATABASE=hr
+MYSQL_USER=root
+MYSQL_PASSWORD="sua-senha-aqui"
 ```
 
 3 - Executar usando docker compose:
@@ -26,8 +28,8 @@ docker-compose up -d
 docker-compose down
 ```
 
-5 - Acessar o MySql do contêiner
+5 - Acessar o MySql do contêiner (será solicitado a senha)
 
 ```bash
-docker exec -it kotlin-mysql mysql -u admin -p hr
+docker exec -it kotlin-mysql mysql -u root -p hr
 ```
